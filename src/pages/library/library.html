@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+    <ion-segment [(ngModel)]="segment" (ionChange)="segmentViewChanged()">
+      <ion-segment-button value="saved">Saved Items</ion-segment-button>
+      <ion-segment-button value="offline">Offline Items</ion-segment-button>
+    </ion-segment>
+  </ion-navbar>
+    
+  <ion-toolbar color="primary" no-border-top>
+    <ion-searchbar color="primary" [(ngModel)]="queryText" (ionInput)="searchList()" placeholder="Search your items"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="segment">
+  
+    <div *ngSwitchCase="'saved'">
+      <div class="loading-view" *ngIf="isLoading">
+        <div class="icon">
+          <ion-spinner color="primary"></ion-spinner>
+        </div>
+      </div>
+
+      <div class="no-items-view" *ngIf="hasSavedItem == 0">
+        <div class="icon">
+          <ion-icon name="ios-bookmark"></ion-icon>
+        </div>
+        <div class="text">
+          <p>No items saved yet!</p>
+        </div>
+      </div>
+  
+      <div class="items-view" *ngIf="hasSavedItem == 1">
+        <ion-list>
+          <ion-card *ngFor="let item of savedItems">
+            <div (click)="openNews(news.url)">
+              <ion-item>
+                <ion-avatar item-left>
+                  <img src="img.jpg">
+                </ion-avatar>
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.source }}</p>
+              </ion-item>
+              <img [src]="item.image">
+              <ion-card-content>
+                <p>{{ item.description }}</p>
+              </ion-card-content>
+            </div>
+            <ion-row>
+              <ion-col>
+                <button ion-button icon-left clear (click)="deleteSavedItem(item.id)">
+                  <ion-icon name="trash"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                <button ion-button icon-left clear (click)="shareItem(item.id)">
+                  <ion-icon name="share"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-list>
+      </div>
+    </div>
+  
+    <div *ngSwitchCase="'offline'">
+      <div class="loading-view" *ngIf="isLoading">
+        <div class="icon">
+          <ion-spinner color="primary"></ion-spinner>
+        </div>
+      </div>
+
+      <div class="no-items-view" *ngIf="!hasOfflineItem">
+        <div class="icon">
+          <ion-icon name="ios-bookmark"></ion-icon>
+        </div>
+        <div class="text">
+          <p>Offline feature coming soon!</p>
+          <!--<p>No items saved offline yet!</p>-->
+        </div>
+      </div>
+  
+      <div class="items-view" *ngIf="hasOfflineItem">
+        <ion-list>
+          <ion-card *ngFor="let item of offlineItems">
+            <div (click)="openNews(news.url)">
+              <ion-item>
+                <ion-avatar item-left>
+                  <img src="img.jpg">
+                </ion-avatar>
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.source }}</p>
+              </ion-item>
+              <img [src]="item.image">
+              <ion-card-content>
+                <p>{{ item.description }}</p>
+              </ion-card-content>
+            </div>
+            <ion-row>
+              <ion-col>
+                <button ion-button icon-left clear (click)="deleteOfflineItem(item.id)">
+                  <ion-icon name="trash"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                <button ion-button icon-left clear (click)="shareItem(item.id)">
+                  <ion-icon name="share"></ion-icon>
+                </button>
+              </ion-col>
+              <!--<ion-col>
+                <button ion-button icon-left clear (click)="showPopover()">
+                  <ion-icon name="more"></ion-icon>
+                </button>
+              </ion-col>-->
+            </ion-row>
+          </ion-card>
+        </ion-list>
+      </div>
+  
+    </div>
+  
+  </div>
+</ion-content>

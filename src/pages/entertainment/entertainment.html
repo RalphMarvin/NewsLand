@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Entertainment</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher pullMax="200" pullMin="100" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <div class="loading-view" *ngIf="isLoading">
+    <div class="icon">
+      <ion-spinner color="primary"></ion-spinner>
+    </div>
+  </div>
+  
+  <div class="offline-view" *ngIf="!isConnected && !hasCache">
+    <div class="icon">
+      <ion-icon name="wifi"></ion-icon>
+    </div>
+    <div class="text">
+      <h1>Connection Lost!</h1>
+      <p>No internet connection available.</p>
+    </div>
+  </div>
+  
+  <div class="items-view" *ngIf="!isLoading">
+    <ion-list>
+      <ion-card *ngFor="let news of globalNewsResults">
+        <div (click)="readNews(news.url)">
+          <ion-item>
+            <ion-avatar item-left>
+              <img src="img.jpg">
+            </ion-avatar>
+            <h2>{{ news.title }}</h2>
+            <p>{{ news.source }}</p>
+          </ion-item>
+          <img [src]="news.image">
+          <ion-card-content>
+            <p>{{ news.description }}</p>
+          </ion-card-content>
+        </div>
+        <ion-row>
+          <ion-col>
+            <button ion-button clear (click)="savedItemForLater(news)">
+              <ion-icon name="ios-bookmark"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear (click)="shareItem(news)">
+              <ion-icon name="share"></ion-icon>
+            </button>
+          </ion-col>
+          <!--<ion-col>
+                <button ion-button clear (click)="optionsPopover($event)">
+                  <ion-icon name="more"></ion-icon>
+                </button>
+              </ion-col>-->
+          <ion-col center text-center>
+            <ion-note>
+              {{ news.publishedAt }}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+  </div>
+
+</ion-content>

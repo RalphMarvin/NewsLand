@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Customize</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="section-a">
+    <h1>Personalize NewsLand</h1>
+    <h3>Customize it to your personal liking</h3>
+    <p>Specify where you want your news from, what kind of news you prefer and also the headlines you like.</p>
+  </div>
+
+  <div class="section-b">
+    <ion-icon name="construct"></ion-icon>
+    <h3>Get Started!</h3>
+  </div>
+
+  <div class="section-c">
+    <ion-row>
+      <ion-col col-6 *ngFor="let category of categories">
+        <ion-card (click)="selectCategory(category.category)">
+          <div class="icon">
+            <ion-icon [name]="category.icon"></ion-icon>
+          </div>
+          <div class="text">
+            <h2>{{ category.title }}</h2>
+          </div>
+          <div class="selector" [hidden]="checkedCategory != category.category">
+            <ion-icon name="ios-checkmark"></ion-icon>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-buttons end>
+    <button ion-button clear icon-left (click)="saveCustomization()">
+      <ion-icon name="checkmark"></ion-icon>
+      Done
+    </button>
+  </ion-buttons>
+</ion-footer>

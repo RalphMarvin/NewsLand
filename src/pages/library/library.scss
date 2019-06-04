@@ -1,0 +1,60 @@
+page-library {
+
+   .content-md {
+    color: #444;
+  }
+
+  .loading-view {
+      margin-top: 30%;
+      margin-bottom: 10%;
+      text-align: center;
+   }
+
+  .loading-view > .icon {
+      padding: 5%;
+      text-align: center;
+  }
+
+  .loading-view > .icon > ion-spinner {
+      width: 120px;
+      height: 120px;
+  }
+
+  .loading-view .icon .spinner-crescent circle {
+     stroke-width: 6px;
+  }
+
+  .no-items-view {
+    text-align: center;
+  }
+
+  .no-items-view > .icon {
+    padding-top: 22%;
+    margin-top: 12%;
+  }
+
+  .no-items-view > .icon > ion-icon {
+    font-size: 10em;
+  }
+
+  .no-items-view .text {
+    margin: 5% 0px;
+    padding: 0px 20px;
+  }
+
+  .no-items-view .text > p {
+    font-size: 15px; 
+  }
+
+  .card-md .label {
+    white-space: normal;
+  }
+
+  .segment-md .segment-button {
+    color: #fff;
+  }
+
+  .segment-md .segment-button.segment-activated {
+    border-color: whitesmoke;
+  }
+}

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Blog Posts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher pullMax="200" pullMin="100" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <div class="loading-view" *ngIf="isLoading">
+    <div class="icon">
+      <ion-spinner color="primary"></ion-spinner>
+    </div>
+  </div>
+  
+  <div class="offline-view" *ngIf="!isConnected">
+    <div class="icon">
+      <ion-icon name="wifi"></ion-icon>
+    </div>
+    <div class="text">
+      <h1>Connection Lost!</h1>
+      <p>No internet connection available.</p>
+    </div>
+  </div>
+  
+  <div class="items-view" *ngIf="!isLoading">
+    <ion-list>
+    </ion-list>
+  </div>
+
+</ion-content>

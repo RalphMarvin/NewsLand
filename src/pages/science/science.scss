@@ -1,0 +1,85 @@
+page-science {
+
+   .loading-view {
+      margin-top: 30%;
+      margin-bottom: 10%;
+      text-align: center;
+   }
+
+  .loading-view > .icon {
+      padding: 5%;
+      text-align: center;
+  }
+
+  .loading-view > .icon > ion-spinner {
+      width: 120px;
+      height: 120px;
+  }
+
+  .loading-view .icon .spinner-crescent circle {
+     stroke-width: 6px;
+  }
+
+  [icon-left] ion-icon {
+      padding-top: 1px;
+  }
+
+  .item-md h2 {
+      font-size: 1.7rem;
+      font-family: 'PT_Sans-Bold';
+      white-space: initial; 
+  }
+
+  .item-md ion-avatar[item-left] {
+      margin-top: 0px;
+  }
+
+  .card-md {
+      margin: 0px 0px 10px 0px;
+      width: 100%;
+      box-shadow: none;
+      border: 1px solid #ccc;
+   }
+
+   .card-md .col [ion-button] {
+      font-size: 2rem;
+   }
+
+  .card .note-md {
+      font-size: 1.2rem;
+  }
+
+  .card-md p {
+      font-size: 1.6rem;
+  }
+
+  .note-md {
+      color: #707070;
+  }
+
+  .col:last-child {
+      margin-top: 15px;
+  }
+
+  .offline-view {
+      text-align: center;
+  }
+
+  .offline-view > .icon {
+      padding-top: 22%;
+      margin-top: 12%;
+  }
+
+  .offline-view > .icon > ion-icon {
+      font-size: 10em;
+  }
+
+  .offline-view .text {
+      margin: 5% 0px;
+      padding: 0px 20px;
+  }
+
+  .offline-view .text > p {
+      font-size: 15px;
+  }
+}

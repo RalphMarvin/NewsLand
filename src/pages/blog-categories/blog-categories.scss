@@ -1,0 +1,24 @@
+page-blog-categories {
+
+   .col {
+      padding-right: 2px;
+      padding-left: 2px;
+   }
+
+   .card-md {
+      text-align: center;
+      padding: 10px;
+      box-shadow: none;
+      border: 1px solid #ccc;
+   }
+
+   .card-md > .icon {
+      font-size: 2em;
+      margin: 8px;
+   }
+
+  .col .card-md {
+      margin: 1px;
+      width: calc(100% - 2px);
+   }
+}

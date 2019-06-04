@@ -1,0 +1,43 @@
+page-start {
+
+   .icon, .details {
+      text-align: center;
+   }
+
+   .icon {
+      padding: 40px 0px 10px 0px;
+   }
+
+   .icon > ion-icon {
+      font-size: 10em;
+      color: color($colors, 'primary');
+   }
+
+   .details {
+      color: color($colors, 'primary');
+   }
+
+   .details > h1 {
+      font-size: 6rem;
+   }
+
+   .details h6 {
+      font-size: 2rem;
+   }
+
+   .details button {
+      margin-top: 40px;
+   }
+
+   .copyright {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+   }
+
+   .copyright > p {
+      text-align: center;
+      color: #656464;
+   }
+}

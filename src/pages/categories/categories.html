@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Categories</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <button ion-item *ngFor="let category of categories" (click)="open(category)">
+      <ion-icon [name]="category.icon" item-left></ion-icon>
+      <h2>{{ category.title }}</h2>
+      <p>{{ category.description }}</p>
+    </button>
+  </ion-list>
+
+</ion-content>

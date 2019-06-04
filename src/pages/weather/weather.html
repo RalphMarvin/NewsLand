@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Weather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="section-a">
+    <div class="view">
+      <div class="place">
+        Accra - Ghana
+      </div>
+      <div class="icon">
+        <ion-icon name="cloud"></ion-icon>
+      </div>
+      <div class="info">
+        <ion-row>
+          <ion-col>
+            <h5>Today</h5>
+          </ion-col>
+          <ion-col>
+            <h5>25 Degrees</h5>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="weather">
+        <h1>Cloudy</h1>
+      </div>
+      <div class="bottom">
+        <button ion-button clear icon-only large color="light" (click)="maximize()">
+          <ion-icon name="ios-arrow-down"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-b">
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="ios-partly-sunny-outline" item-left></ion-icon>
+        <h2>Sunny - 120 Degrees</h2>
+        <p>Friday - 12 June 2018</p>
+      </button>
+    </ion-list>
+  </div>
+
+</ion-content>

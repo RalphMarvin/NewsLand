@@ -1,0 +1,35 @@
+page-weather {
+
+   .section-a {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url();
+      background-position: center;
+      background-size: cover;
+      height: 400px;
+      width: 100%;
+      position: relative;
+   }
+
+   .view {
+      top: 50px;
+      width: 100%;
+      color: #fff;
+      position: absolute;
+      text-align: center;
+   }
+
+   .view .place {
+      text-transform: uppercase;
+   }
+
+   .view .icon {
+      padding: 15px;
+   }
+
+   .view .icon > ion-icon {
+      font-size: 7em;
+   }
+
+   .view .weather h1 {
+      font-size: 3rem;
+   }
+}

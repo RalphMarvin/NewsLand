@@ -1,0 +1,44 @@
+page-blog {
+
+   .loading-view {
+      margin-top: 30%;
+      margin-bottom: 10%;
+      text-align: center;
+   }
+
+  .loading-view > .icon {
+      padding: 5%;
+      text-align: center;
+  }
+
+  .loading-view > .icon > ion-spinner {
+      width: 100px;
+      height: 100px;
+  }
+
+  .loading-view .icon .spinner-crescent circle {
+     stroke-width: 6px;
+  }
+
+  .offline-view {
+      text-align: center;
+  }
+
+  .offline-view > .icon {
+      padding-top: 22%;
+      margin-top: 12%;
+  }
+
+  .offline-view > .icon > ion-icon {
+      font-size: 10em;
+  }
+
+  .offline-view .text {
+      margin: 5% 0px;
+      padding: 0px 20px;
+  }
+
+  .offline-view .text > p {
+      font-size: 15px;
+  }
+}

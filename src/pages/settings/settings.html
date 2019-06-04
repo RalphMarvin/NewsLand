@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <button ion-item (click)="chooseCountryDialog()">
+      <h2>Choose Country</h2>
+      <p>Select your current country. This makes it possible to get content based on your current country.</p>
+    </button>
+
+    <button ion-item (click)="chooseLanguageDialog()">
+      <h2>Change Language Settings</h2>
+      <p>You can read your blog contents in the language you prefer.</p>
+    </button>
+
+    <button ion-item (click)="clearCacheDialog()">
+      <h2>Clear cache</h2>
+      <p>Completely deletes everything stored in cache from this device.</p>
+    </button>
+  </ion-list>
+</ion-content>

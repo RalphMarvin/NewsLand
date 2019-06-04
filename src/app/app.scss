@@ -14,3 +14,128 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+// Fonts
+@font-face {
+   font-family: 'PT_Sans-Regular';
+   src: url('../assets/fonts/PT_Sans-Narrow-Web-Regular.ttf');
+}
+
+@font-face {
+   font-family: 'PT_Sans-Bold';
+   src: url('../assets/fonts/PT_Sans-Narrow-Web-Bold.ttf');
+}
+
+.ion-page {
+  font-family: 'PT_Sans-Regular';
+}
+
+// Button
+.button-md {
+  height: 4.5rem;
+  font-size: 1.6rem;
+  font-family: 'PT_Sans-Bold';
+}
+
+// Scroll
+.scroll-content {
+  overflow-y: auto !important;
+}
+
+// Side Menu
+.menu-container {
+  background: color($colors, 'primary');
+  color: #fff;
+  padding: 30px 30px 10px 30px;
+  text-align: center;
+}
+
+.menu-container > .app-icon {
+  padding: 18px 18px 0px 18px;
+}
+
+.app-icon > ion-icon {
+  font-size: 10em;
+}
+
+.menu-container .app-name {
+  padding: 8px;
+}
+
+.app-name > h1 {
+  font-size: 3.5rem;
+}
+
+.menu-inner .list-md .item-md {
+  font-family: 'PT_Sans-Bold';
+  font-size: 1.8rem;
+  color: #505050;
+}
+
+.menu-inner {
+  font-family: 'PT_Sans-Regular';
+}
+
+.menu-inner .list-md .item-md.active-sidemenu {
+  background: color($colors, 'primary');
+  color: #fff;
+}
+
+// Loading
+.loading-wrapper {
+  width: 92%;
+}
+
+.loading-wrapper .loading-content {
+  font-family: 'PT_Sans-Regular';
+}
+
+.loading-wrapper .loading-spinner {
+  margin-right: 5%;
+}
+
+// Alert
+.alert-md .alert-radio-group, .alert-md .alert-checkbox-group {
+  padding-left: 5px;
+  padding-right: 5px;
+  max-height: 355px;
+}
+
+.alert-md .alert-head {
+  padding: 16px 18px 14px 18px;
+  font-family: 'PT_Sans-Bold';
+}
+
+.alert-md .alert-button-group {
+  padding:  8px 8px 5px 25px;
+}
+
+.alert-md .alert-wrapper {
+  max-width: 96%;
+  width: 96%;
+  border-radius: 1px;
+}
+
+.alert-md .alert-input {
+  font-family: 'PT_Sans-Regular';
+  font-size: 15px;
+}
+
+.alert-md .alert-wrapper .alert-title {
+  font-size: 17px;
+}
+
+.alert-md .alert-wrapper .alert-message {
+  overflow-y: auto;
+}
+
+.alert-radio-label, .alert-checkbox-label {
+  font-family: 'PT_Sans-Regular';
+}
+
+// Toast
+.toast-md .toast-message {
+  font-family: 'PT_Sans-Regular';
+  font-size: 1.3rem;
+}

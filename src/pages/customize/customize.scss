@@ -1,0 +1,58 @@
+page-customize {
+
+   .content-md {
+      color: #404040;
+   }
+
+   .section-a, .section-b {
+      text-align: center;
+   }
+
+   .section-a {
+      padding: 0px 15px 10px 15px;
+   }
+
+   .section-a > h1 {
+      font-size: 3.2rem;
+   }
+
+   .section-a p {
+      font-size: 1.75rem;
+   }
+
+   .section-b {
+      padding: 18px;
+   }
+
+   .section-b > ion-icon {
+      font-size: 6em;
+      color: color($colors, 'primary');
+   }
+
+   .section-c .col {
+      padding-right: 2px;
+      padding-left: 2px;
+   }
+
+   .section-c .card-md {
+      text-align: center;
+      padding: 10px;
+      box-shadow: none;
+      border: 1px solid #ccc;
+   }
+
+   .section-c .card-md > .icon {
+      font-size: 2em;
+      margin: 8px;
+   }
+
+   .section-c .card-md .selector > ion-icon {
+      font-size: 3.5em;
+   }
+
+   .section-c .col .card-md {
+      margin: 1px;
+      width: calc(100% - 2px);
+   }
+
+}
